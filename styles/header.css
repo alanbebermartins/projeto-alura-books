@@ -1,0 +1,174 @@
+.cabecalho__menu-burger{
+    width: 24px;
+    height: 24px;
+    background-image: url(../image/logo-menu.svg);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.conteiner__botao:checked ~ .conteiner__rotulo > .cabecalho__menu-burger {
+    background-image: url("../image/icone-menu-azul.svg");
+}
+
+.cabecalho{
+    background-color: var(--cor-fundo-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+}
+
+.conteiner__imagem {
+    padding: 1em;
+}
+
+.lista__menu {
+    display: none; 
+    /* faz esconder a lista do menu, mas não retira da página */
+    position: absolute;
+    top: 100%;
+    width: 30vh;
+}
+
+.conteiner__botao:checked~.lista__menu{
+    /* faz aparecer a lista quando clica no batao menu, e funciona como uma condicional do javascript */
+    display: block;
+} 
+
+.lista__menu__titulo, .lista__menu__item{
+    padding: 1em;
+    background-color: var(--cor-fundo-branco);
+}
+
+.lista__menu__titulo{
+    color: var(--cor-texto-carrocel-botao);
+    font-weight: 700;
+}
+
+.lista__menu__link{
+    background: var(--cor-azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 16px;
+}
+
+.conteiner__botao {
+    display: none;
+}
+
+.conteiner__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.conteiner__texto {
+    display: none;
+}
+
+/* --------------------------------------SECÇÃO MEDIA QUERIES TELA 1024PX-------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+    .conteiner__titulo, .conteiner__titulo__negrito {
+        font-size: 30px;
+        font-family: var(--font-secondary);
+    }
+
+    .conteiner__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .conteiner__titulo__negrito {
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }   
+
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--cor-botao-titulo);
+    }
+
+    .conteiner__imagem__transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-burger {
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista__menu{
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item {
+        background: var(--cor-azul-degrade);
+        color: var(--cor-fundo-branco);
+    }
+
+    .opcoes__item {
+        padding: 1.5em 1em;
+    }
+
+    .lista__menu__item:hover {
+        background: var(--cor-azul-degrade);
+    }
+
+    .lista__menu__item:hover > .lista__menu__link {
+        -webkit-text-fill-color: var(--cor-fundo-branco);
+        text-decoration: none;
+    }
+
+
+
+}
+
+/* --------------------------------------SECÇÃO MEDIA QUERIES TELA 1728PX OU SUPERIOR -------------------------------------- */
+
+@media screen and (min-width: 1728px) {
+
+    .conteiner__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-botao-titulo);
+        font-size: 20px;
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+    .conteiner__texto {
+        display: block;
+    }
+
+
+
+}

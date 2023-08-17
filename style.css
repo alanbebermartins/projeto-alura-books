@@ -1,0 +1,30 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrosel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/footer.css");
+
+
+:root{
+    --cor-fundo-cinza: #EBECEE;
+    --cor-fundo-branco: #FFFFFF;
+    --cor-botao-titulo: #000000;
+    --cor-azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --cor-azul: #002F52;
+    --cor-texto-carrocel-botao: #EB9B00;
+    --cor-texto-rodape-menu: #858585;
+    --cor-texto-rodape-links: #474646;
+
+    --font-principal: 'Poppins', sans-serif;
+    --font-secondary: 'Josefin Sans', sans-serif;
+
+}
+
+body {
+    background-color: var(--cor-fundo-cinza);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+

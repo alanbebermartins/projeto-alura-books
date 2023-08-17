@@ -1,0 +1,65 @@
+hr {
+    margin: 0;
+}
+
+.rodape {
+    padding: 1.5em;
+}
+
+.rodape__titulo {
+    color: var(--cor-botao-titulo);
+}
+
+.lista__rodape {
+    display: none;
+}
+
+/* --------------------------------------SECÇÃO MEDIA QUERIES-------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+
+    .rodape {
+        padding: 2.5em 0.5em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .lista__rodape {
+        display: block;
+    }
+
+    .lista__rodape__item {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+        
+    }
+
+    .lista__rodape__link {
+        color: var(--cor-texto-rodape-links);
+        text-decoration: none;
+        margin-left: 0.5em;
+        font-size: 14px;
+    }
+
+    .lista__rodape__titulo {
+        color: var(--cor-texto-rodape-menu);
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .rodape__titulo {
+        font-size: 24px;
+    }
+}
+
+
+/* --------------------------------------SECÇÃO MEDIA QUERIES TELA 1728PX OU SUPERIOR ------------------------------- */
+
+@media screen and (min-width: 1728px) {
+
+    .lista__rodape {
+        border-left: 1px solid var(--cor-texto-rodape-menu);
+        padding-left: 1.5em;
+    }    
+}
